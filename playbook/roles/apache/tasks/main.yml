@@ -1,0 +1,9 @@
+- name: Install Apache
+  apt: name=puppetmaster  update_cache=yes state=latest
+
+- name: Copy Index.html
+  copy:
+    src: puppet.conf
+    dest: /etc/puppet/puppet.conf
+    backup: yes
+
